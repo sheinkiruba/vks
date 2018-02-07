@@ -1,24 +1,24 @@
 #include <stdio.h>
 int main()
 {
-    int low, high, i, flag;
+    int v, k, i, flag;
     printf("Enter two numbers(intervals): ");
-    scanf("%d %d", &low, &high);
-    printf("Prime numbers between %d and %d are: ", low, high);
-    while (low < high)
+    scanf("%d %d", &v, &k);
+    printf("Prime numbers between %d and %d are: ", v, k);
+    while (v < k)
     {
         flag = 0;
-        for(i = 2; i <= low/2; ++i)
+        for(i = 2; i <= v/2; ++i)
         {
-            if(low % i == 0)
+            if(v % i == 0)
             {
                 flag = 1;
                 break;
             }
         }
         if (flag == 0)
-            printf("%d ", low);
-        ++low;
+            printf("%d ",v);
+        ++v;
     }
     return 0;
 }
